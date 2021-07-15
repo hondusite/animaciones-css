@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>planeta</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background:radial-gradient(#333,#000);
+        }
+        .planeta{
+            width: 250px;
+            height: 250px;
+            background-image:url('img/planet.jpg');
+            background-size: cover;
+            position: absolute;
+            top: calc(50% - 125px);
+            left:  calc(50% - 125px);
+            border-radius: 50%;
+            box-shadow: -25px -25px 60px #000 inset,
+                         0 0 60px rgb(40, 112, 247);
+            animation:spin 30s linear infinite;
+        }
+        @keyframes spin {
+            0%{
+                background-position:0 0;
+            }
+            100%{
+                background-position:1000px 0;
+            }
+        }
+        .star{
+            width:5px;
+            height: 5px;
+            border-radius: 50%;
+            background:white;
+            position: absolute;
+            top:25px;
+            left:50px;
+            box-shadow: 0 0 30px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="planeta"></div>
+    
+</body>
+</html>
